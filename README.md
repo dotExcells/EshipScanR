@@ -1,14 +1,10 @@
 # EshipScanR v2.5.0 - 15/10/2025 "Open Release"
 
-This processing code is only compatible with the 
-
-## Installation - only run if you have recently (re)installed R
-1.	Open "setup.R" and run each line
-2.	Close R studio completely
+This processing code is only compatible with data produced by the Entrepreneurship Competency Scan
+MS Forms is constantly adding extra columns to the .xls output of a form, so the program may need to be adjusted from time to time to remove them.
 
 ## Usage
-0.	Download the .xls file containing the Eship scan data to a folder of your choice
-	ensure it is the ONLY .xls file in that folder
+0.	Download the .xls file containing the Eship scan data to a folder of your choice, ensure it is the **ONLY** .xls file in that folder
 
 1. 	Copy the file "process.R" to the folder containing your data
 
