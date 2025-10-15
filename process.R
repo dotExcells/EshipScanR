@@ -1,3 +1,14 @@
+#installs required libraries
+packages <- c("dplyr", "readxl", "devtools")
+for(pkg in packages){
+  if(!require(pkg, character.only = TRUE)){
+    install.packages(pkg)
+  }
+}
+if(!require(ggradar)){
+  devtools::install_github("ricardo-bion/ggradar")
+}
+
 #loads the required libraries
 library(readxl)
 library(dplyr)
