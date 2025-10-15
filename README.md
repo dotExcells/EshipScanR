@@ -21,7 +21,9 @@ MS Forms is constantly adding extra columns to the .xls output of a form, so the
 
 ## process.R Usage
 
-1. 	Download the file "process.R" and put it in the folder containing your data
+0. Ensure [RStudio Desktop](https://cran.rstudio.com/) is installed 
+
+1. Download the file "process.R" and put it in the folder containing your data
 
 2.	Open "process.R" in RStudio
 
