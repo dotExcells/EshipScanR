@@ -15,8 +15,8 @@ dir.exists(file.path(mainDir, subDir))
 #reads the data of the .xls file to a dataframe
 ClassData = data.frame(read_excel(file_path))
 
-#trims off useless form data added by MS
-ClassData <- ClassData[ -c(2:5) ]
+#trims off useless form data
+ClassData <- ClassData[ -c(2:6) ]
 
 #sets the ID to count from just in case you started from a row ID =/= 1
 CurrentIndividual <- ClassData[1,1]
@@ -25,20 +25,20 @@ NumberOfIndividuals <- nrow(ClassData)
 FinalIndividual <- NumberOfIndividuals+CurrentIndividual
 
 #calculates averages for each category and adds to ClassData sheet
-ClassData$IntAv <- rowMeans(ClassData[ , c(4:6)], na.rm=TRUE)
-ClassData$DivAv <- rowMeans(ClassData[ , c(7:10)], na.rm=TRUE)
-ClassData$SysAv <- rowMeans(ClassData[ , c(11:14)], na.rm=TRUE)
-ClassData$StraAv <- rowMeans(ClassData[ , c(15:22)], na.rm=TRUE)
-ClassData$NormAv <- rowMeans(ClassData[ , c(23:26)], na.rm=TRUE)
-ClassData$ForesAv <- rowMeans(ClassData[ , c(27:30)], na.rm=TRUE)
+ClassData$IntAv <- rowMeans(ClassData[ , c(3:5)], na.rm=TRUE)
+ClassData$DivAv <- rowMeans(ClassData[ , c(6:9)], na.rm=TRUE)
+ClassData$SysAv <- rowMeans(ClassData[ , c(10:13)], na.rm=TRUE)
+ClassData$StraAv <- rowMeans(ClassData[ , c(14:21)], na.rm=TRUE)
+ClassData$NormAv <- rowMeans(ClassData[ , c(22:25)], na.rm=TRUE)
+ClassData$ForesAv <- rowMeans(ClassData[ , c(26:29)], na.rm=TRUE)
 
 #stores class averages as values for later
-IntAv <- mean(ClassData[,31])
-DivAv <- mean(ClassData[,32])
-SysAv <- mean(ClassData[,33])
-StraAv <- mean(ClassData[,34])
-NormAv <- mean(ClassData[,35])
-ForesAv <- mean(ClassData[,36])
+IntAv <- mean(ClassData[,30])
+DivAv <- mean(ClassData[,31])
+SysAv <- mean(ClassData[,32])
+StraAv <- mean(ClassData[,33])
+NormAv <- mean(ClassData[,34])
+ForesAv <- mean(ClassData[,35])
 
 #loop the following code until all individuals are processed
 while(CurrentIndividual < FinalIndividual) { 
@@ -47,12 +47,12 @@ while(CurrentIndividual < FinalIndividual) {
   SelectedIndividual <- ClassData %>% filter(ID==CurrentIndividual)
 
 #get the personal averages
-  InterpersonalMean <- round(SelectedIndividual[1,31], digits = 1)
-  DiversityMean <- round(SelectedIndividual[1,32], digits = 1)
-  SysThinkMean <- round(SelectedIndividual[1,33], digits = 1)
-  StratActionMean <- round(SelectedIndividual[1,34], digits = 1)
-  NormCompMean <- round(SelectedIndividual[1,35], digits = 1)
-  ForesThinkMean <- round(SelectedIndividual[1,36], digits = 1)
+  InterpersonalMean <- round(SelectedIndividual[1,30], digits = 1)
+  DiversityMean <- round(SelectedIndividual[1,31], digits = 1)
+  SysThinkMean <- round(SelectedIndividual[1,32], digits = 1)
+  StratActionMean <- round(SelectedIndividual[1,33], digits = 1)
+  NormCompMean <- round(SelectedIndividual[1,34], digits = 1)
+  ForesThinkMean <- round(SelectedIndividual[1,35], digits = 1)
   
 #make the axis titles for each person include their scores
   InterpersonalTitle = toString(paste("Interpersonal -", InterpersonalMean))
@@ -63,7 +63,7 @@ while(CurrentIndividual < FinalIndividual) {
   ForesThinkTitle = toString(paste("Foresighted Thinking -", ForesThinkMean))
   
 #set up the data to plot for the individual
-  idName <- SelectedIndividual[3]
+  idName <- SelectedIndividual[2]
   fileName <- paste(idName,".jpg")
   ReferenceData <- idName
   Plottabledata <- data.frame(idName, InterpersonalMean, DiversityMean, SysThinkMean, StratActionMean, NormCompMean, ForesThinkMean)
