@@ -5,10 +5,23 @@ This processing code is only compatible with data produced by the [Entrepreneurs
 
 MS Forms is constantly adding extra columns to the .xls output of a form, so the program may need to be adjusted from time to time to remove them.
 
-## Usage
-0.	Download the .xls file containing the Eship scan data to a folder of your choice, ensure it is the **ONLY** .xls file in that folder
+## Form Setup
 
-1. 	Copy the file "process.R" to the folder containing your data
+1. Duplicate the [Entrepreneurship Competency Scan](https://edu.nl/mqmny) form
+
+2. Click "Collect responses".
+   Then, on the left-hand side, select "Anyone can respond" and then click "Copy Link"
+
+4. Share this link with your participants
+
+5. Once you are ready to process the data, navigate to "View Responses".
+    Then, on the right-hand side under "Insights and actions", click the downward-facing arrow next to the spreadsheet icon and select "Download a copy"
+
+6. Place the downloaded data in a new folder, ensuring it is the **ONLY** .xls file in that folder
+
+## process.R Usage
+
+1. 	Download the file "process.R" and put it in the folder containing your data
 
 2.	Open "process.R" in RStudio
 
