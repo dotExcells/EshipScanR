@@ -1,10 +1,10 @@
 # EshipScanR v2.5.0 - 15/10/2025 "Open Release"
 
-##Installation - only run if you have recently (re)installed R
+## Installation - only run if you have recently (re)installed R
 1.	Open "setup.R" and run each line
 2.	Close R studio completely
 
-##Usage
+## Usage
 0.0	Download the .xls file containing the Eship scan data to a folder of your choice
 	ensure it is the ONLY .xls file in that folder
 
