@@ -15,8 +15,8 @@ dir.exists(file.path(mainDir, subDir))
 #reads the data of the .xls file to a dataframe
 ClassData = data.frame(read_excel(file_path))
 
-#trims off useless form data
-ClassData <- ClassData[ -c(2:4) ]
+#trims off useless form data added by MS
+ClassData <- ClassData[ -c(2:5) ]
 
 #sets the ID to count from just in case you started from a row ID =/= 1
 CurrentIndividual <- ClassData[1,1]
