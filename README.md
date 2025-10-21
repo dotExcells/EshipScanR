@@ -7,7 +7,7 @@ MS Forms is constantly adding extra columns to the .xls output of a form, so the
 
 ## Form Setup
 
-1. Duplicate the [Entrepreneurship Competency Scan](https://edu.nl/mqmny) form
+1. Duplicate the [Entrepreneurship Competency Scan](https://edu.nl/mqmny) form. If this is no longer available, instructions are available in Form.md
 
 2. Click "Collect responses".
    Then, on the left-hand side, select "Anyone can respond" and then click "Copy Link"
