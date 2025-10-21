@@ -33,7 +33,7 @@ An example method of generating a unique code is:
 > Name: Linda
 > Date of birth: 29-07-1991
 > Place of birth: Amsterdam
- 
+>  
 > The unique code in this case is: L29071991A (this is just an example, do not copy this code!)
 
 ## Questions
